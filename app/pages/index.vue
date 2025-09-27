@@ -69,14 +69,14 @@ const agents = [
               <td class="p-4 font-bold">{{ agent.name }}</td>
               <td class="p-4">
                 <span
-                  :class="{
-                    'px-2 py-1 rounded-full text-xs font-medium': true,
-                    'bg-green-100 text-green-700': agent.status === 'Active',
-                    'bg-orange-100 text-orange-700': agent.status === 'Break',
-                    'bg-gray-100 text-gray-700': agent.status === 'Offline'
-                  }"
-                >
-                  {{ agent.status }}
+                  :class="[
+                      'px-4 py-1 rounded-full font-semibold text-[13px] inline-block min-w-[70px] text-center',
+                      agent.status === 'Active' ? 'bg-[#1aad4b] text-white' : '',
+                      agent.status === 'Break' ? 'bg-[#e88318] text-white' : '',
+                      agent.status === 'Offline' ? 'bg-[#f2f4f7] text-[#7c8db5] border border-[#e3e7ef]' : ''
+                    ]"
+                  >
+                    {{ agent.status }}
                 </span>
               </td>
               <td class="p-4">{{ agent.calls }}</td>

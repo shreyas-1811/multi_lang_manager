@@ -11,7 +11,7 @@ import {
 </script>
 
 <template>
-  <div class="w-64 h-screen bg-[#00008B] text-white flex flex-col">
+  <div class="w-64 h-screen bg-[#001F54] text-white flex flex-col">
     <!-- Profile -->
     <div class="p-6 flex items-center space-x-3">
       <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-blue-600 font-bold">
@@ -24,7 +24,8 @@ import {
     </div>
 
     <!-- Navigation -->
-    <nav class="flex-1 px-4 space-y-2">
+    <!-- Reduced space-y-0 for minimal gap between links -->
+    <nav class="flex-1 px-4 space-y-0">
       <p class="uppercase text-xs text-gray-300 mb-2">Navigation</p>
 
       <NuxtLink to="/" class="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-blue-700">
