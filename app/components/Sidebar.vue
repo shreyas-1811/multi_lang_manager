@@ -11,7 +11,7 @@ import {
 </script>
 
 <template>
-  <div class="w-64 h-screen bg-blue-600 text-white flex flex-col">
+  <div class="w-64 h-screen bg-[#00008B] text-white flex flex-col">
     <!-- Profile -->
     <div class="p-6 flex items-center space-x-3">
       <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-blue-600 font-bold">
