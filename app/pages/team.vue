@@ -22,7 +22,7 @@
     <h2 class="text-lg font-semibold mb-3">Team Overview</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
       <!-- Team Alpha -->
-      <div class="bg-white rounded-lg p-4 shadow-sm border">
+      <div class="bg-white rounded-lg px-3 py-2 shadow-sm border">
         <div class="flex justify-between items-center mb-2">
           <h3 class="font-bold text-lg flex items-center gap-2">
             <i class="ri-team-line text-blue-500"></i>
@@ -30,7 +30,7 @@
           </h3>
           <span class="text-xs bg-gray-100 px-2 py-1 rounded">8 agents</span>
         </div>
-        <div class="flex gap-6 mb-4 text-sm">
+        <div class="flex gap-6 mb-3 text-sm">
           <div class="flex flex-col items-center">
             <span class="text-green-600 font-semibold">5</span>
             <span class="text-gray-500">Active</span>
@@ -48,11 +48,11 @@
         <div class="w-full bg-gray-200 h-2 rounded-full">
           <div class="bg-blue-600 h-2 rounded-full w-[75%]"></div>
         </div>
-        <p class="text-right text-sm font-semibold text-gray-700">75%</p>
+        <p class="text-right text-sm font-semibold text-gray-700 mt-1">75%</p>
       </div>
 
       <!-- Team Beta -->
-      <div class="bg-white rounded-lg p-4 shadow-sm border">
+      <div class="bg-white rounded-lg px-3 py-2 shadow-sm border">
         <div class="flex justify-between items-center mb-2">
           <h3 class="font-bold text-lg flex items-center gap-2">
             <i class="ri-team-line text-blue-500"></i>
@@ -60,7 +60,7 @@
           </h3>
           <span class="text-xs bg-gray-100 px-2 py-1 rounded">6 agents</span>
         </div>
-        <div class="flex gap-6 mb-4 text-sm">
+        <div class="flex gap-6 mb-3 text-sm">
           <div class="flex flex-col items-center">
             <span class="text-green-600 font-semibold">4</span>
             <span class="text-gray-500">Active</span>
@@ -78,7 +78,7 @@
         <div class="w-full bg-gray-200 h-2 rounded-full">
           <div class="bg-blue-600 h-2 rounded-full w-[82%]"></div>
         </div>
-        <p class="text-right text-sm font-semibold text-gray-700">82%</p>
+        <p class="text-right text-sm font-semibold text-gray-700 mt-1">82%</p>
       </div>
     </div>
 
@@ -88,7 +88,7 @@
       <div
         v-for="(agent, index) in agents"
         :key="index"
-        class="bg-white rounded-lg p-4 shadow-sm border flex flex-col"
+        class="bg-white rounded-lg px-3 py-2 shadow-sm border flex flex-col"
       >
         <div class="flex items-center gap-3 mb-2">
           <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold">
@@ -100,13 +100,13 @@
           </div>
         </div>
         <span
-          class="self-start px-3 py-1 text-xs font-semibold rounded-full mb-3"
+          class="self-start px-3 py-1 text-xs font-semibold rounded-full mb-2"
           :class="agent.statusClass"
         >
           {{ agent.status }}
         </span>
         <p class="text-sm text-gray-500">Status: <span class="text-gray-700">{{ agent.detail }}</span></p>
-        <p class="text-sm text-gray-500 mb-3">Call: <span class="text-gray-700">{{ agent.call }}</span></p>
+        <p class="text-sm text-gray-500 mb-2">Call: <span class="text-gray-700">{{ agent.call }}</span></p>
         <div class="flex gap-3 mt-auto text-gray-500">
           <i class="ri-phone-line cursor-pointer hover:text-gray-700"></i>
           <i class="ri-message-2-line cursor-pointer hover:text-gray-700"></i>
@@ -131,7 +131,6 @@ const agents = [
 </script>
 
 <style scoped>
-/* Ensure font & spacing matches your design */
 body {
   font-family: 'Inter', sans-serif;
 }
